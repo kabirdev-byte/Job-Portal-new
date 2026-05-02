@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import JobListing from '../components/JobListing'
-import appDownload from '../components/appDownload'
+import AppDownload from '../components/AppDownload'
 import Footer from '../components/Footer'
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
         <Navbar/>
         <Hero/>
         <JobListing/>
-        <appDownload/>
+        <AppDownload/>
         <Footer/>
     </div>
   )
