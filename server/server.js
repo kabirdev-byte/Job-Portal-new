@@ -32,7 +32,7 @@ app.use(cors(
   {
   origin: [
     'http://localhost:5173',
-    'https://job-portal.vercel.app'  // Apna actual frontend URL yahan
+    'https://kabir-job-portal.vercel.app'  // Apna actual frontend URL yahan
   ],
   credentials: true
 }
