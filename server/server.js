@@ -26,8 +26,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://kabir-job-portal-afy7ue91s-kabirjamshaid4-9736s-projects.vercel.app", // ✅ AUTO-GENERATED URL
-      "https://kabir-job-portal.vercel.app", // Apna actual frontend URL yahan
+      "https://job-portal-new-seven-delta.vercel.app/", 
+      
     ],
     credentials: true,
   }),
