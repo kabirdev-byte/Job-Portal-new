@@ -26,7 +26,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://job-portal-new-seven-delta.vercel.app/", 
+      "https://job-portal-new-seven-delta.vercel.app", 
       
     ],
     credentials: true,
@@ -50,6 +50,9 @@ app.use("/api/users", userRoutes);
 app.use(Sentry.Handlers.errorHandler());
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+export default app; 
