@@ -1,9 +1,9 @@
-import "./config/instrument.js";
+// import "./config/instrument.js";
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
 import connectDB from "./config/db.js";
-import * as Sentry from "@sentry/node";
+// import * as Sentry from "@sentry/node";
 import { clerkWebhooks } from "./controllers/webhooks.js";
 import companyRoutes from "./routes/companyRoutes.js";
 import connectCloudinary from "./config/cloudinary.js";
@@ -19,7 +19,7 @@ await connectDB();
 await connectCloudinary();
 
 // 🔹 Sentry request handler MUST be first
-app.use(Sentry.Handlers.requestHandler());
+// app.use(Sentry.Handlers.requestHandler());
 
 // middlewares
 app.use(
@@ -47,7 +47,7 @@ app.use("/api/jobs", jobRoutes);
 app.use("/api/users", userRoutes);
 
 // 🔹 Sentry error handler MUST be after routes
-app.use(Sentry.Handlers.errorHandler());
+// app.use(Sentry.Handlers.errorHandler());
 
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== "production") {
